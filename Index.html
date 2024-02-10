@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Single-Page Site</title>
+</head>
+<body style="background-color: gray;">
+    <img src="Bradley Logo.png" alt="" width="150" height="150">
+    <header>
+        <h1 style="font-size:50px;color:brown;"><b>Bradley University</b></h1>
+        <p style="font-size:30px;color: #000;"><b>Student Information Page</b></p>
+    </header>
+
+    <section id="content">
+        <h2 style="color:brown;">Enter new student information:</h2>
+        <form action="AddStudent.php" method="post">
+            <p>Student ID:</p>
+            <input type="number" id="student_id" name="student_id" pattern="[0-9]+" placeholder="Student ID"><br>
+            <p>Email:</p>
+            <input type="email" id="email_id" name="email_id" placeholder="Email"><br>
+            <p>Student name:</p>
+            <input type="text" id="student_name" name="student_name" placeholder="Student Name"><br>    
+            <p>Gender:</p>
+            <input type="text" id="gender" name="gender" placeholder="Gender"><br>
+            <p>Major:</p>
+            <input type="text" id="major_id" name="major_id" placeholder="Major"><br>
+            
+            <button type="reset" onclick="resetData()">Reset</button>
+            <input name="submit" type="submit">
+            
+        </form>
+        <section id="displayResult" style="font-size:10px;color:brown;text-align:right;text-align: center;">
+            <h2>Current student information:</h2>
+           <form action="DisplayStudents.php" method="post">
+              <input name="submit" type="submit" value="Get_Students_details"/>
+           </form>
+                
+        </section>
+        <section id="termsdisplay" style="font-size:10px;color:brown;text-align:right;text-align: center;">
+            <h3>termsoffered:</h3>
+           <form action="termsdisplay.php" method="post">
+              <input name="submit" type="submit" value="Get_terms_details"/>
+           </form>
+    </section>
+
+       
+</body>
+</html>
